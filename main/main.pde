@@ -11,7 +11,7 @@ float[][] test = {{200, 200, 800, 800, 900, 200},
                   
 int count = 0;
 
-EntrySystem entrysys;
+PathSystem pathsys;
 
 void setup() {
    size(1000,1000, P3D);
@@ -43,7 +43,7 @@ void setup() {
       coords[j][3] = 1000 - map(coords[j][3], 40.68, 40.78, 0, 1000); // reverse-y
    }
    
-   entrysys = new EntrySystem(coords);
+   pathsys = new PathSystem(coords);
    smooth();
 }
 
@@ -62,7 +62,7 @@ void draw() {
    image(img,0,0,width,height);
    
    // curve path for each Entry object if time condition is satisfied
-   entrysys.animate(float(count));
+   pathsys.animate(float(count));
    
    /*
    time = millis();

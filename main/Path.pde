@@ -1,4 +1,4 @@
-class Entry {
+class Path {
     ArrayList<PVector> points = new ArrayList<PVector>();
     PVector begin;
     PVector end;
@@ -7,7 +7,7 @@ class Entry {
     float distance;
     int enumerate = 1;
     
-    Entry(float x0, float y0, float xf, float yf, float duration, float elapsed) {
+    Path(float x0, float y0, float xf, float yf, float duration, float elapsed) {
         this.begin = new PVector(x0, y0, 0);
         this.end = new PVector(xf, yf, 0);
         this.duration = duration;
